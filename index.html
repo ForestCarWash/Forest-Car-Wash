@@ -1,206 +1,135 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Forest Car Wash</title>
-  <link rel="icon" href="favicon.jpg" type="image/png" />
-  <style>
-    :root {
-      --cor-principal: #f1c40f;
-      --cor-fundo: #000;
-      --cor-texto: #fff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: var(--cor-principal);
-      color: #000;
-      padding: 20px 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 10%;
-    }
-
-    header h1 {
-      font-size: 2rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .hero {
-  background-image: url('337904759_557043266519023_107218751909275666_n.jpg'); /* imagem de fundo */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
+  <title>FOREST CAR WASH</title>
+<link rel="icon" href="favicon.jpg" type="image/png" />
+<style>
+:root {
+--cor-principal: #f1c40f;
+--cor-fundo: #000;
+--cor-texto: #fff;
 }
 
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* escurecida inicialmente */
-      z-index: 1;
-      transition: background-color 1s ease;
-    }
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--cor-fundo);
+color: var(--cor-texto);
+line-height: 1.6;
+}
 
-    .hero.ativo::after {
-      background-color: rgba(0, 0, 0, 0.2); /* clareia depois */
-    }
+header {
+background-color: var(--cor-principal);
+color: #000;
+padding: 20px 0;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 10%;
+}
 
-    .hero h2 {
-      font-size: 3rem;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 10px;
-    }
-  </style>
+header h1 {
+font-size: 2rem;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+nav a {
+text-decoration: none;
+color: #000;
+font-weight: bold;
+}
+
+.hero {
+background-image: url('337904759_557043266519023_107218751909275666_n.jpg'); /* imagem de fundo */
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #fff;
+position: relative;
+}
+
+.hero::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* escurecida inicialmente */
+z-index: 1;
+transition: background-color 1s ease;
+}
+
+.hero.ativo::after {
+background-color: rgba(0, 0, 0, 0.2); /* clareia depois */
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+}
+
+.hero h2 {
+font-size: 3rem;
+padding: 20px;
+background-color: rgba(0, 0, 0, 0.4);
+border-radius: 10px;
+}
+</style>
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <h1>Forest Car Wash</h1>
-      <nav>
-        <ul>
-          <li><a href="#sobre">Sobre nós</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+<div class="container">
+<h1>Forest Car Wash</h1>
+<nav>
+<ul>
+<li><a href="#sobre">Sobre nós</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#galeria">Galeria</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
+</div>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h2>Seu carro limpo e brilhando como nunca!</h2>
-      </div>
-    </section>
-  </main>
+<main>
+<section class="hero">
+<div class="hero-content">
+<h2>Seu carro limpo e brilhando como nunca!</h2>
+</div>
+</section>
+</main>
 
-  <script>
-    // Clareia a imagem após 3 segundos
-    setTimeout(() => {
-      document.querySelector('.hero').classList.add('ativo');
-    }, 3000);
-  </script>
+<script>
+// Clareia a imagem após 3 segundos
+setTimeout(() => {
+document.querySelector('.hero').classList.add('ativo');
+}, 3000);
+</script>
 
-    <section id="sobre" class="section">
-      <h2>Sobre Nós</h2>
-      <p>Tudo começou quando Leandro deixou seu emprego com carteira assinada.</p>
-<p>Convidado por seu amigo Emerson, surgiu a ideia de empreender e criar algo próprio.</p>
-<p>Nasceu então o "Oliveira Lava-Car", que mais tarde se transformaria na Forest Car Wash.</p>
-<p>No início, enfrentaram muitos desafios — sem experiência no ramo, aprenderam com os erros e persistiram.</p>
-<p>Com o tempo, a dedicação deu frutos.</p>
-<p>Hoje, a Forest Car Wash se orgulha de oferecer não apenas um serviço automotivo de excelência, mas também um compromisso genuíno com a sustentabilidade, utilizando produtos biodegradáveis e sistemas de reaproveitamento de água.</p>
-    </section>
-
-    <section id="servicos" class="section">
-      <h2>Nossos Serviços</h2>
-      <div class="services">
-        <div class="service-box">
-          <h3>Lavagem Completa</h3>
-          <p>Interior e exterior com cera protetora.</p>
-        </div>
-        <div class="service-box">
-          <h3>Higienização Interna</h3>
-          <p>Limpeza profunda de estofados e ar-condicionado.</p>
-        </div>
-        <div class="service-box">
-          <h3>Enceramento</h3>
-          <p>Proteção de pintura com brilho intenso.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="galeria" class="section">
-      <h2>Galeria</h2>
-      <div class="gallery">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipNDlgTpOWkxqplpBsCKAl_Cmts3RYTPD1NSIevx=s1360-w1360-h1020-rw" alt="Equipe trabalhando" />
-        <img src="https://lh3.googleusercontent.com/p/AF1QipP-RyYTXKBd2O0zxvSEK17yN6FHnUFsqJIRGUfk=s1360-w1360-h1020-rw" alt="Carro limpo 1" />
-        <img src="https://lh3.googleusercontent.com/p/AF1QipPNxjEUyfUfK-vPxPTjt00Cjr6L54hI4Lm34XIR=s1360-w1360-h1020-rw" alt="Carro limpo 2" />
-        <img src="https://lh3.googleusercontent.com/p/AF1QipPCcU02GNLK9uNGX8zXVKNGhkR0MVVlUZs4UIT8=s1360-w1360-h1020-rw" alt="Carro limpo 3" />
-        <img src="https://lh3.googleusercontent.com/p/AF1QipNES9tlW2NqJcJjo8IW4trjAghGr_NelZUqBoY5=s1360-w1360-h1020-rw" alt="Carro limpo 4" />
-        <img src="https://lh3.googleusercontent.com/p/AF1QipNii-f_fAwzGKjIhrMovmlGnKnGsDOp6T8Bhpwk=s1360-w1360-h1020-rw" alt="Carro limpo 5" />
-      </div>
-    </section>
-
-<form action="https://formsubmit.co/forestcarwash222@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Seu nome" required>
-  <input type="email" name="email" placeholder="Seu email" required>
-  <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-
-  <!-- Proteções -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-
-  <button type="submit">Enviar</button>
-</form>
-
-
-  <footer>
-    <p>&copy; 2025 Forest Car Wash. Todos os direitos reservados.</p>
-    <div class="socials">
-      <a href="https://www.instagram.com/forestcarwassh/" target="_blank" title="Instagram">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
-      </a>
-      <a href="https://www.facebook.com/forestcarwas" target="_blank" title="Facebook">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-      </a>
-      <a href="https://wa.me/5519992794539" target="_blank" title="WhatsApp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-    </div>
-  </footer>
-
-</body>
-</html>
+<section id="sobre" class="section">
+<h2>Sobre Nós</h2>
 
