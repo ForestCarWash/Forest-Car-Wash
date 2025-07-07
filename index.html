@@ -58,138 +58,45 @@
       font-weight: bold;
     }
 
-.hero {
-  background-image: url('https://scontent.fcpq16-1.fna.fbcdn.net/v/t39.30808-6/337904759_557043266519023_107218751909275666_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=VTPQN_oMz0wQ7kNvwEqIgNZ&_nc_oc=AdkoGxhDTeZETlrpNoaEwMZ3fSECkIo6xADOSRTdkzOxQW_RHNLEvv0p4EeVsYlsd6k&_nc_zt=23&_nc_ht=scontent.fcpq16-1.fna&_nc_gid=uHxUcuoYsv-s02iGhehHlA&oh=00_AfT-N5dnxLpS4b3L-uUR5IqXUI463J9DGEXgHgWAEO5gtw&oe=6871FBE6');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #000;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
-}
-
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Escurecimento mais forte */
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.4); /* Caixa do texto com leve transparência */
-  border-radius: 10px;
-}
-
-
-    .section {
-      padding: 80px 10%;
-    }
-
-    .section h2 {
-      color: var(--cor-principal);
-      margin-bottom: 20px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .service-box {
-      background-color: #111;
-      border: 2px solid var(--cor-principal);
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .service-box:hover {
-      transform: scale(1.05);
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    form {
+    .hero {
+      background-image: url('337904759_557043266519023_107218751909275666_n.jpg'); /* imagem de fundo */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    button {
-      background-color: var(--cor-principal);
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #d4ac0d;
-    }
-
-    footer {
-      background-color: #111;
-      padding: 30px 10%;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      color: var(--cor-texto);
+      color: #fff;
+      position: relative;
     }
 
-    .socials a {
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 1.5rem;
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* escurecida inicialmente */
+      z-index: 1;
+      transition: background-color 1s ease;
     }
 
-    .socials img {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
+    .hero.ativo::after {
+      background-color: rgba(0, 0, 0, 0.2); /* clareia depois */
     }
 
-    @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-      }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
 
-      .hero h2 {
-        font-size: 2rem;
-      }
+    .hero h2 {
+      font-size: 3rem;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -215,6 +122,14 @@
         <h2>Seu carro limpo e brilhando como nunca!</h2>
       </div>
     </section>
+  </main>
+
+  <script>
+    // Clareia a imagem após 3 segundos
+    setTimeout(() => {
+      document.querySelector('.hero').classList.add('ativo');
+    }, 3000);
+  </script>
 
     <section id="sobre" class="section">
       <h2>Sobre Nós</h2>
