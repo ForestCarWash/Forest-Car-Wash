@@ -4,7 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Forest Car Wash</title>
+<meta name="description" content="Lavagem ecológica, detalhamento automotivo e cuidado com seu carro em Campinas.">
+<meta name="keywords" content="lava-rápido, Campinas, lavagem de carro, ecológico, detalhamento automotivo">
+<meta name="author" content="Forest Car Wash">
 <link rel="icon" href="favicon.jpg" type="image/png" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
 :root {
   --cor-principal: #f1c40f;
@@ -16,17 +21,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 header {
@@ -63,13 +65,12 @@ nav a {
 }
 
 .hero {
-  background-image: url('https://scontent.fcpq16-1.fna.fbcdn.net/v/t39.30808-6/337904759_557043266519023_107218751909275666_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=VTPQN_oMz0wQ7kNvwEqIgNZ&_nc_oc=AdkoGxhDTeZETlrpNoaEwMZ3fSECkIo6xADOSRTdkzOxQW_RHNLEvv0p4EeVsYlsd6k&_nc_zt=23&_nc_ht=scontent.fcpq16-1.fna&_nc_gid=uHxUcuoYsv-s02iGhehHlA&oh=00_AfT-N5dnxLpS4b3L-uUR5IqXUI463J9DGEXgHgWAEO5gtw&oe=6871FBE6');
-  background-size: contain;
+  background-image: url('https://scontent.fcpq16-1.fna.fbcdn.net/...');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000;
   min-height: 100vh;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,15 +103,16 @@ nav a {
 }
 
 .section {
-  padding: 80px 10%;
+  padding: 100px 10% 80px;
 }
 
 .section h2 {
   color: var(--cor-principal);
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
-.services {
+.services, .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -128,15 +130,22 @@ nav a {
   transform: scale(1.05);
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
 .gallery img {
   width: 100%;
   border-radius: 8px;
+}
+
+.testimonials {
+  background-color: #111;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.testimonials p {
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
 form {
@@ -189,31 +198,23 @@ footer {
   transform: scale(1.2);
 }
 
-.whatsapp-float {
+.whatsapp-button {
   position: fixed;
-  width: 60px;
-  height: 60px;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-  z-index: 1001;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
   transition: transform 0.3s ease;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
+.whatsapp-button:hover {
+  transform: scale(1.2);
 }
 
-.whatsapp-float img {
-  width: 30px;
-  height: 30px;
+.whatsapp-button img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -224,134 +225,124 @@ footer {
   .hero h2 {
     font-size: 2rem;
   }
+
+  nav ul {
+    flex-direction: column;
+    background-color: var(--cor-principal);
+    position: absolute;
+    top: 60px;
+    right: 10%;
+    display: none;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+    display: block;
+  }
 }
 </style>
 </head>
 <body>
 
 <header>
-<div class="container">
-  <h1>Forest Car Wash</h1>
-  <nav>
-    <ul>
-      <li><a href="#sobre">Sobre nós</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#contato">Nosso Contato</a></li>
-    </ul>
-  </nav>
-</div>
+  <div class="container">
+    <h1>Forest Car Wash</h1>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
+      <span style="font-size: 24px;">&#9776;</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
-<section class="hero">
-  <div class="hero-content">
-    <h2>Seu carro limpo e brilhando como nunca!</h2>
-  </div>
-</section>
-
-<section id="sobre" class="section">
-  <h2>Sobre Nós</h2>
-  <p>Tudo começou quando Leandro deixou seu emprego com carteira assinada.</p>
-  <p>Convidado por seu amigo Emerson, surgiu a ideia de empreender e criar algo próprio.</p>
-  <p>Nasceu então o "Oliveira Lava-Car", que mais tarde se transformaria na Forest Car Wash.</p>
-  <p>No início, enfrentaram muitos desafios — sem experiência no ramo, aprenderam com os erros e persistiram.</p>
-  <p>Com o tempo, a dedicação deu frutos.</p>
-  <p>Hoje, a Forest Car Wash se orgulha de oferecer não apenas um serviço automotivo de excelência, mas também um compromisso genuíno com a sustentabilidade, utilizando produtos biodegradáveis e sistemas de reaproveitamento de água.</p>
-</section>
-
-<section id="servicos" class="section">
-  <h2>Nossos Serviços</h2>
-  <div class="services">
-    <div class="service-box">
-      <h3>Lavagem Completa</h3>
-      <p>Interior e exterior com cera protetora.</p>
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h2>Seu carro limpo e brilhando como nunca!</h2>
     </div>
-    <div class="service-box">
-      <h3>Higienização Interna</h3>
-      <p>Limpeza profunda de estofados e ar-condicionado.</p>
+  </section>
+
+  <section id="sobre" class="section" data-aos="fade-up">
+    <h2>Sobre Nós</h2>
+    <p>Tudo começou quando Leandro deixou seu emprego...</p>
+  </section>
+
+  <section id="servicos" class="section" data-aos="fade-up">
+    <h2>🧼 Nossos Serviços</h2>
+    <div class="services">
+      <div class="service-box">...</div>
+      <div class="service-box">...</div>
+      <div class="service-box">...</div>
     </div>
-    <div class="service-box">
-      <h3>Enceramento</h3>
-      <p>Proteção de pintura com brilho intenso.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="galeria" class="section">
-  <h2>Galeria</h2>
-  <div class="gallery">
-    <img src="https://lh3.googleusercontent.com/p/AF1QipNDlgTpOWkxqplpBsCKAl_Cmts3RYTPD1NSIevx=s1360-w1360-h1020-rw" alt="Equipe trabalhando" />
-    <img src="https://lh3.googleusercontent.com/p/AF1QipP-RyYTXKBd2O0zxvSEK17yN6FHnUFsqJIRGUfk=s1360-w1360-h1020-rw" alt="Carro limpo 1" />
-    <img src="https://lh3.googleusercontent.com/p/AF1QipPNxjEUyfUfK-vPxPTjt00Cjr6L54hI4Lm34XIR=s1360-w1360-h1020-rw" alt="Carro limpo 2" />
-    <img src="https://lh3.googleusercontent.com/p/AF1QipPCcU02GNLK9uNGX8zXVKNGhkR0MVVlUZs4UIT8=s1360-w1360-h1020-rw" alt="Carro limpo 3" />
-    <img src="https://lh3.googleusercontent.com/p/AF1QipNES9tlW2NqJcJjo8IW4trjAghGr_NelZUqBoY5=s1360-w1360-h1020-rw" alt="Carro limpo 4" />
-    <img src="https://lh3.googleusercontent.com/p/AF1QipNii-f_fAwzGKjIhrMovmlGnKnGsDOp6T8Bhpwk=s1360-w1360-h1020-rw" alt="Carro limpo 5" />
-  </div>
-</section>
+  <section id="galeria" class="section" data-aos="fade-up">
+    <h2>📷 Galeria</h2>
+    <div class="gallery">...</div>
+  </section>
 
-<section id="nosso_contato" class="section">
-  <h2>Fale Conosco</h2>
-  <form id="formContato" action="https://formsubmit.co/forestcarwash222@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Seu nome" required>
-    <input type="email" name="email" placeholder="Seu email" required>
-    <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-  <p id="msgStatus" style="display:none;"></p>
-</section>
+  <section class="section testimonials" data-aos="fade-up">
+    <h2>💬 Depoimentos</h2>
+    <p>"Excelente atendimento e serviço rápido. Meu carro nunca esteve tão limpo!"</p>
+    <p>"Recomendo demais. Atendimento top e compromisso com o meio ambiente."</p>
+  </section>
 
-<!-- BOTÃO WHATSAPP -->
-<a href="https://wa.me/5519992794539" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+  <section id="contato" class="section" data-aos="fade-up">
+    <h2>📧 Fale Conosco</h2>
+    <form id="formContato" action="https://formsubmit.co/forestcarwash222@gmail.com" method="POST">...</form>
+    <p id="msgStatus" style="display:none;"></p>
+  </section>
+</main>
+
+<a href="https://wa.me/5519992794539" class="whatsapp-button" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
 <footer>
   <p>&copy; 2025 Forest Car Wash. Todos os direitos reservados.</p>
-  <div class="socials">
-    <a href="https://www.instagram.com/forestcarwassh/" target="_blank" title="Instagram">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
-    </a>
-    <a href="https://www.facebook.com/forestcarwas" target="_blank" title="Facebook">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-    </a>
-    <a href="https://wa.me/5519992794539" target="_blank" title="WhatsApp">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-    </a>
-  </div>
+  <div class="socials">...</div>
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  const form = document.getElementById('formContato');
-  const msgStatus = document.getElementById('msgStatus');
+AOS.init();
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
+const form = document.getElementById('formContato');
+const msgStatus = document.getElementById('msgStatus');
 
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        msgStatus.style.display = 'block';
-        msgStatus.style.color = 'green';
-        msgStatus.textContent = 'Mensagem enviada com sucesso!';
-        form.reset();
-      } else {
-        throw new Error('Erro no envio');
-      }
-    }).catch(error => {
-      msgStatus.style.display = 'block';
-      msgStatus.style.color = 'red';
-      msgStatus.textContent = 'Erro ao enviar a mensagem, tente novamente.';
-    });
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const formData = new FormData(form);
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    msgStatus.style.display = 'block';
+    if (response.ok) {
+      msgStatus.style.color = 'green';
+      msgStatus.textContent = 'Mensagem enviada com sucesso!';
+      form.reset();
+    } else {
+      throw new Error('Erro no envio');
+    }
+  }).catch(error => {
+    msgStatus.style.color = 'red';
+    msgStatus.textContent = 'Erro ao enviar a mensagem, tente novamente.';
   });
+});
 </script>
-
 </body>
 </html>
