@@ -1,325 +1,388 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lavagem ecológica de veículos com qualidade e compromisso. Conheça a Forest Car Wash!" />
-  <meta name="keywords" content="lava-rápido, lavagem ecológica, higienização automotiva, enceramento, car wash" />
-  <meta name="author" content="Forest Car Wash" />
-  <title>Forest Car Wash</title>
-  <link rel="icon" href="favicon.jpg" type="image/png" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <meta property="og:title" content="Forest Car Wash">
-  <meta property="og:description" content="Lavagem ecológica de veículos com qualidade e compromisso.">
-  <meta property="og:image" content="favicon.jpg">
-  <meta property="og:url" content="https://forestcarwash.github.io/Forest-Car-Wash/">
-  <meta name="twitter:card" content="summary_large_image">
-  <style>
-    :root {
-      --cor-principal: #f1c40f;
-      --cor-fundo: #000;
-      --cor-texto: #fff;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Forest Car Wash</title>
+<link rel="icon" href="favicon.jpg" type="image/png" />
+<style>
+:root {
+  --cor-principal: #f1c40f;
+  --cor-fundo: #000;
+  --cor-texto: #fff;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-padding-top: 120px;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
-      line-height: 1.6;
-    }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
 
-    header {
-      background-color: var(--cor-principal);
-      color: #000;
-      padding: 20px 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      height: 100px;
-    }
+header {
+  background-color: var(--cor-principal);
+  color: #000;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
 
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 10%;
-      height: 100%;
-    }
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
 
-    header h1 {
-      font-size: 2rem;
-    }
+header h1 {
+  font-size: 2rem;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
 
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      color: #fff;
-      margin-top: 100px; /* para compensar header fixo */
-    }
+.hero {
+  background-image: url('https://scontent.fcpq16-1.fna.fbcdn.net/v/t39.30808-6/337904759_557043266519023_107218751909275666_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=VTPQN_oMz0wQ7kNvwEqIgNZ&_nc_oc=AdkoGxhDTeZETlrpNoaEwMZ3fSECkIo6xADOSRTdkzOxQW_RHNLEvv0p4EeVsYlsd6k&_nc_zt=23&_nc_ht=scontent.fcpq16-1.fna&_nc_gid=uHxUcuoYsv-s02iGhehHlA&oh=00_AfT-N5dnxLpS4b3L-uUR5IqXUI463J9DGEXgHgWAEO5gtw&oe=6871FBE6');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
 
-    .hero:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
 
-    .hero h2 {
-      font-size: 3rem;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 10px;
-    }
+.hero h2 {
+  font-size: 3rem;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
 
-    .section {
-      padding: 80px 10%;
-    }
+.section {
+  padding: 80px 10%;
+}
 
-    .section h2 {
-      color: var(--cor-principal);
-      margin-bottom: 20px;
-    }
+.section h2 {
+  color: var(--cor-principal);
+  margin-bottom: 20px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 
-    .service-box {
-      background-color: #111;
-      border: 2px solid var(--cor-principal);
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
+.service-box {
+  background-color: #111;
+  border: 2px solid var(--cor-principal);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
 
-    .service-box:hover {
-      transform: scale(1.05);
-    }
+.service-box:hover {
+  transform: scale(1.05);
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
 
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-    }
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-    input, textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
 
-    button {
-      background-color: var(--cor-principal);
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+button {
+  background-color: var(--cor-principal);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    button:hover {
-      background-color: #d4ac0d;
-    }
+button:hover {
+  background-color: #d4ac0d;
+}
 
-    footer {
-      background-color: #111;
-      padding: 30px 10%;
-      text-align: center;
-      color: var(--cor-texto);
-    }
+footer {
+  background-color: #111;
+  padding: 30px 10%;
+  text-align: center;
+  color: var(--cor-texto);
+}
 
-    .socials a {
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 1.5rem;
-      display: inline-block;
-      transition: transform 0.3s ease;
-    }
+.socials a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
 
-    .socials a:hover {
-      transform: scale(1.1);
-    }
+.socials img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
 
-    .socials img {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
-    }
-  </style>
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Forest Car Wash</h1>
-      <nav>
-        <ul>
-          <li><a href="#sobre-anchor">Sobre Nós</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+
+<header>
+<div class="container">
+  <h1>Forest Car Wash</h1>
+  <nav>
+    <ul>
+      <li><a href="#sobre">Sobre nós</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Nosso Contato</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-content">
+    <h2>Aqui, seu carro fica limpo e brilhando!</h2>
+  </div>
+</section>
+
+<section id="sobre" class="section">
+  <h2>Sobre Nós</h2>
+  <p>Tudo começou quando Leandro deixou seu emprego com carteira assinada.</p>
+  <p>Convidado por seu amigo Emerson, surgiu a ideia de empreender e criar algo próprio.</p>
+  <p>Nasceu então o "Oliveira Lava-Car", que mais tarde se transformaria na Forest Car Wash.</p>
+  <p>No início, enfrentaram muitos desafios — sem experiência no ramo, aprenderam com os erros e persistiram.</p>
+  <p>Com o tempo, a dedicação deu frutos.</p>
+  <p>Hoje, a Forest Car Wash se orgulha de oferecer não apenas um serviço automotivo de excelência, mas também um compromisso genuíno com a sustentabilidade, utilizando produtos biodegradáveis e sistemas de reaproveitamento de água.</p>
+</section>
+
+<section id="servicos" class="section">
+  <h2>Nossos Serviços</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>Lavagem Completa</h3>
+      <p>Interior e exterior com cera protetora.</p>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Seu carro limpo e brilhando como nunca!</h2>
+    <div class="service-box">
+      <h3>Higienização Interna</h3>
+      <p>Limpeza profunda de estofados e ar-condicionado.</p>
     </div>
-  </section>
-
-  <!-- Espaçador invisível para compensar header fixo -->
-  <div id="sobre-anchor" style="position: relative; top: -100px; visibility: hidden;"></div>
-  
-  <section class="section" data-aos="fade-up">
-    <h2>Sobre Nós</h2>
-    <p>Tudo começou quando Leandro deixou seu emprego com carteira assinada.</p>
-    <p>Convidado por seu amigo Emerson, surgiu a ideia de empreender e criar algo próprio.</p>
-    <p>Nasceu então o "Oliveira Lava-Car", que mais tarde se transformaria na Forest Car Wash.</p>
-    <p>No início, enfrentaram muitos desafios — sem experiência no ramo, aprenderam com os erros e persistiram.</p>
-    <p>Com o tempo, a dedicação deu frutos.</p>
-    <p>Hoje, a Forest Car Wash se orgulha de oferecer não apenas um serviço automotivo de excelência, mas também um compromisso genuíno com a sustentabilidade, utilizando produtos biodegradáveis e sistemas de reaproveitamento de água.</p>
-  </section>
-  
-  <section id="servicos" class="section">
-    <h2>Nossos Serviços</h2>
-    <div class="services">
-      <div class="service-box">
-        <h3>Lavagem Completa</h3>
-        <p>Interior e exterior com cera protetora.</p>
-      </div>
-      <div class="service-box">
-        <h3>Higienização Interna</h3>
-        <p>Limpeza profunda de estofados e ar-condicionado.</p>
-      </div>
-      <div class="service-box">
-        <h3>Enceramento</h3>
-        <p>Proteção de pintura com brilho intenso.</p>
-      </div>
+    <div class="service-box">
+      <h3>Enceramento</h3>
+      <p>Proteção de pintura com brilho intenso.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section" data-aos="fade-up">
-    <h2>Como Chegar</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.684073663257!2d-47.09364628465592!3d-22.959766985002456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c9a095336b63%3A0xbc69573f0ba357e7!2sForest%20Car%20Wash!5e0!3m2!1spt-BR!2sbr!4v1620390315376!5m2!1spt-BR!2sbr" 
-      width="100%" 
-      height="350" 
-      style="border:0; border-radius: 10px;" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </section>
+<section id="galeria" class="section">
+  <h2>Galeria</h2>
+  <div class="gallery">
+    <a href="https://lh3.googleusercontent.com/p/AF1QipMB0wit0kaTwgwiXDtBaMjbpdAdxTYoffyv9xFV=s680-w680-h510-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipMB0wit0kaTwgwiXDtBaMjbpdAdxTYoffyv9xFV=s680-w680-h510-rw" alt="Carro limpo 1" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipP-RyYTXKBd2O0zxvSEK17yN6FHnUFsqJIRGUfk=s1360-w1360-h1020-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipP-RyYTXKBd2O0zxvSEK17yN6FHnUFsqJIRGUfk=s1360-w1360-h1020-rw" alt="Carro limpo 2" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipPNxjEUyfUfK-vPxPTjt00Cjr6L54hI4Lm34XIR=s1360-w1360-h1020-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPNxjEUyfUfK-vPxPTjt00Cjr6L54hI4Lm34XIR=s1360-w1360-h1020-rw" alt="Carro limpo 3" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipPCcU02GNLK9uNGX8zXVKNGhkR0MVVlUZs4UIT8=s1360-w1360-h1020-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPCcU02GNLK9uNGX8zXVKNGhkR0MVVlUZs4UIT8=s1360-w1360-h1020-rw" alt="Carro limpo 4" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipNES9tlW2NqJcJjo8IW4trjAghGr_NelZUqBoY5=s1360-w1360-h1020-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipNES9tlW2NqJcJjo8IW4trjAghGr_NelZUqBoY5=s1360-w1360-h1020-rw" alt="Carro limpo 5" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipPGykDuyREavWOhdu-rsS9n9i9VaSK7Vot-v_gA=s680-w680-h510-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPGykDuyREavWOhdu-rsS9n9i9VaSK7Vot-v_gA=s680-w680-h510-rw" alt="Carro limpo 6" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipNc1YdtET3XvqTMm0tsumN2R7kM_fBXeX7ztp3c=s680-w680-h510-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipNc1YdtET3XvqTMm0tsumN2R7kM_fBXeX7ztp3c=s680-w680-h510-rw" alt="Carro limpo 7" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipPCnwoJfja7R9Iz6BhpinrIHHVW8MRLRfxwhIwP=s680-w680-h510-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPCnwoJfja7R9Iz6BhpinrIHHVW8MRLRfxwhIwP=s680-w680-h510-rw" alt="Carro limpo 8" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipN4G7uZfAj_XzJIpyWyHFVZpOa-4As9g_gYKNu9=s680-w680-h510-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipN4G7uZfAj_XzJIpyWyHFVZpOa-4As9g_gYKNu9=s680-w680-h510-rw" alt="Carro limpo 9" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipMkLU_mzUdHrl0BvvUNRBgYU28iWkA7qBFP3KI_=s680-w680-h510-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipMkLU_mzUdHrl0BvvUNRBgYU28iWkA7qBFP3KI_=s680-w680-h510-rw" alt="Carro limpo 10" />
+    </a>
+    <a href="https://lh3.googleusercontent.com/p/AF1QipP1SFGFxWNIHm3GRtSnTLjlqov9k_u9ivh_SX04=s680-w680-h510-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipP1SFGFxWNIHm3GRtSnTLjlqov9k_u9ivh_SX04=s680-w680-h510-rw" alt="Carro limpo 11" />
+    </a> 
+    <a href="https://lh3.googleusercontent.com/p/AF1QipPx7n4axZAkgPhfOvjlBTJc5o5oWtuTDJAUcEyj=s680-w680-h510-rw" target="_blank">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPx7n4axZAkgPhfOvjlBTJc5o5oWtuTDJAUcEyj=s680-w680-h510-rw" alt="Carro limpo 12" />
+    </a>
+  </div>
+</section>
 
-  <section class="section" style="background-color: #111; text-align: center;" data-aos="fade-up">
-    <h2 style="color: var(--cor-principal);">Avaliações</h2>
-    <p style="font-size: 1.5rem; margin: 20px 0;">⭐⭐⭐⭐⭐</p>
-    <p>"Ótimo atendimento, pessoas de confiança, preço justo e a lavagem é caprichada!"</p>
-    <br />
-    <p style="font-size: 1.5rem; margin: 20px 0;">⭐⭐⭐⭐⭐</p>
-    <p>"Ótimo! Boa lavagem e ainda trabalham com agendamento 👍"</p>
-  </section>
-  
-  <section id="galeria" class="section">
-    <h2>Galeria</h2>
-    <div class="gallery">
-      <img src="https://lh3.googleusercontent.com/p/AF1QipNDlgTpOWkxqplpBsCKAl_Cmts3RYTPD1NSIevx=s1360-w1360-h1020-rw" alt="Equipe trabalhando" loading="lazy" />
-      <img src="https://lh3.googleusercontent.com/p/AF1QipP-RyYTXKBd2O0zxvSEK17yN6FHnUFsqJIRGUfk=s1360-w1360-h1020-rw" alt="Carro limpo 1" loading="lazy" />
-      <img src="https://lh3.googleusercontent.com/p/AF1QipPNxjEUyfUfK-vPxPTjt00Cjr6L54hI4Lm34XIR=s1360-w1360-h1020-rw" alt="Carro limpo 2" loading="lazy" />
-    </div>
-  </section>
+<style>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+.gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+</style>
 
-  <section id="contato" class="section">
-    <h2>Fale Conosco</h2>
-    <form id="formContato" action="https://formsubmit.co/forestcarwash222@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu email" required>
-      <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <p id="msgStatus" style="display:none;"></p>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 Forest Car Wash. Todos os direitos reservados.</p>
-    <div class="socials">
-      <a href="https://www.instagram.com/forestcarwassh/" target="_blank" title="Instagram">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
-      </a>
-      <a href="https://www.facebook.com/forestcarwas" target="_blank" title="Facebook">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-      </a>
-      <a href="https://wa.me/5519992794539" target="_blank" title="WhatsApp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-      <a href="https://www.google.com/maps/place/Forest+Car+Wash/@-22.9597711,-47.0910713,17z" target="_blank" title="Google Maps">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Localização" />
-      </a>
-    </div>
-  </footer>
+<section id="contato" class="section">
+  <h2>Fale Conosco</h2>
+  <form id="formContato" action="https://formsubmit.co/forestcarwash222@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu email" required>
+    <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="msgStatus" style="display:none;"></p>
+</section>
 
-  <script>
+
+<footer>
+  <p>&copy; 2025 Forest Car Wash. Todos os direitos reservados.</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/forestcarwassh/" target="_blank" title="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/forestcarwas" target="_blank" title="Facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+    </a>
+    <a href="https://wa.me/5519992794539" target="_blank" title="WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    <a href="https://www.google.com/maps/place/Forest+Car+Wash/@-22.9597711,-47.0910713,17z/data=!3m1!4b1!4m6!3m5!1s0x94c8c9a095336b63:0xbc69573f0ba357e7!8m2!3d-22.9597711!4d-47.0910713!16s%2Fg%2F11hzfy0k0q?authuser=2&entry=ttu&g_ep=EgoyMDI1MDcwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="Localização no Google Maps">
+      <img src="Google_Maps_icon_(2020).svg.png" alt="GoogleMaps" />
+    </a>
+  </div>
+</footer>
+<!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formContato');
     const msgStatus = document.getElementById('msgStatus');
 
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       const formData = new FormData(form);
+
       fetch(form.action, {
         method: form.method,
         body: formData,
@@ -341,6 +404,12 @@
         msgStatus.textContent = 'Erro ao enviar a mensagem, tente novamente.';
       });
     });
-  </script>
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
