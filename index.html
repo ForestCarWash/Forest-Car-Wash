@@ -175,7 +175,6 @@
     .gallery img {
       width: 100%;
       border-radius: 8px;
-      loading: lazy;
     }
 
     form {
@@ -202,19 +201,6 @@
 
     button:hover {
       background-color: #d4ac0d;
-    }
-
-    .testimonial {
-      background-color: #111;
-      padding: 40px;
-      margin-top: 40px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .testimonial p.star {
-      font-size: 1.5rem;
-      color: gold;
     }
 
     footer {
@@ -253,43 +239,77 @@
       width: 60px;
       height: 60px;
     }
-
-    .mapa {
-      margin-top: 40px;
-      border-radius: 10px;
-      overflow: hidden;
-    }
   </style>
 </head>
 <body>
-  <!-- conteúdo do site -->
+  <!-- ... (cabeçalho, hero e sobre mantidos) ... -->
 
-  <section class="testimonial">
-    <p class="star">★★★★★</p>
-    <p>"Ótimo muito Boa lavagem e ainda trabalham com agendamento 👍"</p>
-    <p class="star">★★★★★</p>
-    <p>"Ótimo atendimento pessoas de confiança, preço justo e a lavagem é caprichada!"</p>
+  <section id="servicos" class="section">
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Lavagem Completa</h3>
+        <p>Interior e exterior com cera protetora.</p>
+      </div>
+      <div class="service-box">
+        <h3>Higienização Interna</h3>
+        <p>Limpeza profunda de estofados e ar-condicionado.</p>
+      </div>
+      <div class="service-box">
+        <h3>Enceramento</h3>
+        <p>Proteção de pintura com brilho intenso.</p>
+      </div>
+    </div>
   </section>
 
-  <div class="mapa">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0901997938207!2d-47.09324662489102!3d-22.959771079219586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c9a095336b63%3A0xbc69573f0ba357e7!2sForest%20Car%20Wash!5e0!3m2!1spt-BR!2sbr!4v1720470000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+  <section id="galeria" class="section">
+    <h2>Galeria</h2>
+    <div class="gallery">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipNDlgTpOWkxqplpBsCKAl_Cmts3RYTPD1NSIevx=s1360-w1360-h1020-rw" alt="Equipe trabalhando" loading="lazy" />
+      <img src="https://lh3.googleusercontent.com/p/AF1QipP-RyYTXKBd2O0zxvSEK17yN6FHnUFsqJIRGUfk=s1360-w1360-h1020-rw" alt="Carro limpo 1" loading="lazy" />
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPNxjEUyfUfK-vPxPTjt00Cjr6L54hI4Lm34XIR=s1360-w1360-h1020-rw" alt="Carro limpo 2" loading="lazy" />
+    </div>
+  </section>
 
-  <a class="whatsapp-float" href="https://wa.me/5519992794539" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-  </a>
+  <section id="contato" class="section">
+    <h2>Fale Conosco</h2>
+    <form id="formContato" action="https://formsubmit.co/forestcarwash222@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="msgStatus" style="display:none;"></p>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+  <!-- Scripts JS -->
   <script>
-    AOS.init();
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.getElementById('menuToggle');
-      const navLinks = document.getElementById('navLinks');
-      if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-          navLinks.classList.toggle('show');
-        });
-      }
+    const form = document.getElementById('formContato');
+    const msgStatus = document.getElementById('msgStatus');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          msgStatus.style.display = 'block';
+          msgStatus.style.color = 'green';
+          msgStatus.textContent = 'Mensagem enviada com sucesso!';
+          form.reset();
+        } else {
+          throw new Error('Erro no envio');
+        }
+      }).catch(error => {
+        msgStatus.style.display = 'block';
+        msgStatus.style.color = 'red';
+        msgStatus.textContent = 'Erro ao enviar a mensagem, tente novamente.';
+      });
     });
   </script>
 </body>
